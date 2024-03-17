@@ -1,16 +1,12 @@
-# This is a sample Python script.
+import requests
+import User
+from Converter import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('Привет')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+URL = 'https://22dd1f97-419f-4670-90fe-b2048616ab91.mock.pstmn.io'
+responce = requests.get(URL+"/User")
+responceData = responce.json()
+user=User.ParseFromJSON(responceData)
+userC=User(user.id,user.name,user.isManager)
+print(userC.__dict__)
+userII=User.Constructor2(user.id,user.name,user.isManager,email= "yandex")
+print(userII.__dict__)
