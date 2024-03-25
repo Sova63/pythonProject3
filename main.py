@@ -1,5 +1,5 @@
 import requests
-import User
+from User import User
 from Converter import *
 
 URL = 'https://22dd1f97-419f-4670-90fe-b2048616ab91.mock.pstmn.io'

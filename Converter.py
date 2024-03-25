@@ -1,5 +1,5 @@
 from collections import namedtuple
-import User
+from User import User
 
 def ConvertJSONToClass(jsonObject,objectName):
 	obj = namedtuple(objectName.jsonObject.keys())(*jsonObject.value())

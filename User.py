@@ -8,7 +8,7 @@ class User():
 
 	@classmethod
 	def ParseFromJSON(self,JsonObject):
-		return Converter.ConvertJSONToclass(JsonObject,objectName=User)
+		return Converter.ConvertJSONToClass(JsonObject,objectName=User)
 	@classmethod
 	def Constructor2(cls,id,name,isManager,email):
 		user=User(id,name,isManager)
